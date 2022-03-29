@@ -142,8 +142,23 @@ for k in range (0,p):
 
 m.optimize()
 
+resul=np.zeros((mint,n*p))
+k=0
+ii=0
+jj=0
 for v in m.getVars():
-    print(v.varName, v.x)
+    resul[ii][jj]=v.x
+    k+=1
+    jj+=1
+    if k>=n*p:
+        k=0
+        ii+=1
+        jj=0
+
+#for v in m.getVars():
+#    print(v.varName, v.x)
+
+print(resul)
 
 
 ##quatrième contrainte
