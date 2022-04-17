@@ -1,0 +1,74 @@
+{% extends "base.html" %} {% block title %}Home{% endblock %} {% block content
+    %}
+    <h3 class="mt-4 d-flex" style="color:#075e04">Formulaire d'ajout d'une pharmacie à la base de données</h1>
+        <form>
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Nom de la pharmacie ou autre info</label>
+              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+              <div id="emailHelp" class="form-text">Les informations personnelles ne seront pas diffusés aux autres utilisateurs</div>
+            </div>
+            <label for="exampleInputPassword1" class="form-label">Créneaux (Sélectionnez les créneaux auxquels vous avez besoin de personnels)</label>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault1">
+                <label class="form-check-label" for="flexCheckDefault1">
+                  Lundi Matin
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked2">
+                <label class="form-check-label" for="flexCheckChecked2">
+                  Lundi Aprem
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault3">
+                <label class="form-check-label" for="flexCheckDefault3">
+                  Mardi Matin
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked4">
+                <label class="form-check-label" for="flexCheckChecked4">
+                  Mardi Aprem
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault5">
+                <label class="form-check-label" for="flexCheckDefault5">
+                  Mercredi Matin
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked6">
+                <label class="form-check-label" for="flexCheckChecked6">
+                  Mercredi Aprem
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault7">
+                <label class="form-check-label" for="flexCheckDefault7">
+                  Jeudi Matin
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked8">
+                <label class="form-check-label" for="flexCheckChecked8">
+                  Jeudi Aprem
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault9">
+                <label class="form-check-label" for="flexCheckDefault9">
+                  Vendredi Matin
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked10">
+                <label class="form-check-label" for="flexCheckChecked10">
+                  Vendredi Aprem
+                </label>
+              </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+    {% endblock %}
+    
