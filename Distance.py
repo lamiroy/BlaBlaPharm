@@ -1,15 +1,33 @@
 from gurobipy import *
 import pulp as pl
 import numpy as np
+import time
+
+start = time.time()
 
 u=0
 
 m = Model()
 m.params.NonConvex = 2
 
-#exemple 
+#exemple
 c=np.array([[1,0,1],[0,1,1],[0,1,0],[0,0,1],[1,1,1]])
 mo=np.array([0,1,1,0,0,1,1,1,0,1,1,1])
+
+nbcrecan=0
+for i in range(len(c)):
+    for j in range(len(c[i])):
+        if c[i][j] == 1:
+            nbcrecan+=1
+
+nbcrepha=0
+for i in range(len(mo)):
+    if mo[i] == 1:
+        nbcrepha+=1
+
+nbcrefin=0
+
+distancetotal=0
 
 #taille du model
 n=4
@@ -83,13 +101,16 @@ for i in range (0,n):
 for i in range(mint):
     for j in range(n):
         sommeProb-=x[i][j*p]*distance[j][n+i]  #k=0
+
     for k in range(1,p):
         for j in range(n):
             for l in range(n):
                 sommeProb-=x[i][j*p+(k-1)]*x[i][l*p+k]*(distance[j][l]-distance[l][n+i]) #cas ou 2 creneau se suivent
+
     for k in range(1,p):
         for l in range(n):
             sommeProb-=x[i][l*p+k]*distance[l][n+i] # cas ou le pharmacien n'a pas de creneau juste avant
+
 
 m.setObjective(sommeProb , GRB.MAXIMIZE)
 
@@ -149,4 +170,30 @@ for v in m.getVars():
         jj=0
 
 #affichage de la solution
+for i in range(len(resul)):
+    for j in range(len(resul[i])):
+        if resul[i][j] == 1:
+            nbcrefin+=1
+            #distancetotal+=distance[i][j]
+
+
+
+#for v in m.getVars():
+#    print(v.varName, v.x)
+end = time.time()
 print(resul)
+print(" ")
+print("la solution a été trouvée en :")
+print(end-start)
+print(" ")
+print("Parmi les pharmaciens:")
+print((nbcrefin/nbcrecan)*100)
+print("% des creneaux ont été attribués")
+print(" ")
+print("Parmi les pharmacies:")
+print((nbcrefin/nbcrepha)*100)
+print("% des creneaux ont été attribués")
+print(" ")
+print("Distance total parcourue:")
+print(distancetotal)
+print("mètres")

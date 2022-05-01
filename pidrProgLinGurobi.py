@@ -1,6 +1,9 @@
 from gurobipy import *
 import pulp as pl
 import numpy as np
+import time
+
+start = time.time()
 
 u=0
 
@@ -10,7 +13,18 @@ c=np.array([[1,0,1],[0,1,1],[0,1,0],[0,0,1],[1,1,1]])
 
 mo=np.array([0,1,1,0,0,1,1,1,0,1,1,1])
 
+nbcrecan=0
+for i in range(len(c)):
+    for j in range(len(c[i])):
+        if c[i][j] == 1:
+            nbcrecan+=1
 
+nbcrepha=0
+for i in range(len(mo)):
+    if mo[i] == 1:
+        nbcrepha+=1
+
+nbcrefin=0
 
 n=4
 p=3
@@ -100,7 +114,7 @@ for i in range (0,n):
 #            print(mo[i*p+k])
             sommeProb+= x[j][i*p+k]*mo[i*p+k]
 
-print(sommeProb)
+
 m.setObjective(sommeProb , GRB.MAXIMIZE)
 
 #premiere contrainte
@@ -155,10 +169,27 @@ for v in m.getVars():
         ii+=1
         jj=0
 
+for i in range(len(resul)):
+    for j in range(len(resul[i])):
+        if resul[i][j] == 1:
+            nbcrefin+=1
+
 #for v in m.getVars():
 #    print(v.varName, v.x)
-
+end = time.time()
 print(resul)
+print(" ")
+print("la solution a été trouvée en :")
+print(end-start)
+print(" ")
+print("Parmi les pharmaciens:")
+print((nbcrefin/nbcrecan)*100)
+print("% des creneaux ont été attribués")
+print(" ")
+print("Parmi les pharmacies:")
+print((nbcrefin/nbcrepha)*100)
+print("% des creneaux ont été attribués")
+
 
 
 ##quatrième contrainte
