@@ -1,0 +1,149 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+.retour{
+    margin-top: 10px;
+    margin-left: 15px;
+    font-size: 30px;
+    color: #fff;
+}
+.wrapper {
+  width: 780px;
+  margin: 100px auto 0;
+}
+
+.container {
+  max-width : 1400px;
+}
+.wrapper .title {
+  font-size: 24px;
+  color: #fff;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.container .option_item {
+  display: block;
+  position: relative;
+  width: 175px;
+  height: 175px;
+  margin: 10px;
+}
+
+.container .option_item .checkbox {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  opacity: 0;
+}
+
+.option_item .option_inner {
+  width: 100%;
+  height: 100%;
+  background: #ebebeb;
+  border-radius: 5px;
+  text-align: center;
+  padding: 58px 40px;
+  cursor: pointer;
+  color: #585c68;
+  display: block;
+  border: 5px solid transparent;
+  position: relative;
+}
+
+.option_item .option_inner .icon {
+  margin-bottom: 10px;
+}
+
+.option_item .option_inner .icon .fab {
+  font-size: 32px;
+}
+
+.option_item .option_inner .name {
+  user-select: none;
+}
+
+.option_item .checkbox:checked ~ .option_inner {
+  border-color: #29bf0a;
+  color: #29bf0a;
+}
+
+.option_item .checkbox:disabled ~ .option_inner {
+    border-color: red;
+    color: red;
+  }
+
+.option_item .option_inner .tickmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: 20px solid;
+  border-color: #000 transparent transparent #000;
+  display: none;
+}
+
+.option_item .option_inner .tickmark:before {
+  content: "";
+  position: absolute;
+  top: -18px;
+  left: -18px;
+  width: 15px;
+  height: 5px;
+  border: 3px solid;
+  border-color: transparent transparent #eeeee4 #eeeee4;
+  transform: rotate(-45deg);
+}
+
+.option_item .checkbox:checked ~ .option_inner .tickmark {
+  display: block;
+}
+
+.option_item .option_inner .tickmark {
+  border-color: #29bf0a transparent transparent #29bf0a;
+}
+
+.submit_button{
+  background-color: #bbbbbb;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-decoration: none;
+  margin: 4px 2px;
+  border-radius: 25px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.submit_form{
+  text-align: center;
+}
+
+.menu{
+  padding-top: 20%;
+  text-align: center;
+  }
+
+  .button_menu{
+  background-color: #bbbbbb;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-decoration: none;
+  margin: 4px 2px;
+  border-radius: 25px;
+  cursor: pointer;
+  text-align: center;
+  }
