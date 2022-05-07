@@ -1,0 +1,139 @@
+{% extends "base.html" %} {% block title %}Home{% endblock %} {% block content
+    %}
+    <h3 class="mt-4 d-flex" style="color:#075e04">Formulaire d'ajout d'une pharmacie à la base de données</h1>
+        <form>
+            <div class="mb-3">
+              <label for="exampleInputName" class="form-label">Nom de la pharmacie</label>
+              <input type="name" class="form-control" id="exampleInputName" aria-describedby="name">
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputAdress" class="form-label">Adresse de la pharmacie</label>
+              <input type="adress" class="form-control" id="exampleInputAdress" aria-describedby="adress">
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputAdress" class="form-label">Compétences requises pour le poste</label>
+              <input type="compet" class="form-control" id="exampleInputCompet" aria-describedby="compet">
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputAdress" class="form-label">Description du poste</label>
+              <input type="descrip" class="form-control" id="exampleInputDescrip" aria-describedby="descrip">
+            </div>
+            <label for="exampleInputPassword1" class="form-label">Créneaux (Sélectionnez les créneaux auxquels vous avez besoin de personnels)</label>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="0" onclick="if (this.checked) this.value=1; else this.value=0;" id="flexCheckChecked2" name="flexCheckDefault2">
+              <label class="form-check-label" for="flexCheckChecked2">
+                Lundi 10h-12h
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="0" onclick="if (this.checked) this.value=1; else this.value=0;" id="flexCheckDefault3" name="flexCheckDefault3">
+              <label class="form-check-label" for="flexCheckDefault3">
+                Lundi 14h-16h
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="0" onclick="if (this.checked) this.value=1; else this.value=0;" id="flexCheckChecked4" name="flexCheckDefault4">
+              <label class="form-check-label" for="flexCheckChecked4">
+                Lundi 16h-18h
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="0" onclick="if (this.checked) this.value=1; else this.value=0;" id="flexCheckDefault5" name="flexCheckDefault5">
+              <label class="form-check-label" for="flexCheckDefault5">
+                Mardi 8h-10h
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="0" onclick="if (this.checked) this.value=1; else this.value=0;" id="flexCheckChecked6" name="flexCheckDefault6">
+              <label class="form-check-label" for="flexCheckChecked6">
+                Mardi 10h-12h
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="0" onclick="if (this.checked) this.value=1; else this.value=0;" id="flexCheckDefault7" name="flexCheckDefault7">
+              <label class="form-check-label" for="flexCheckDefault7">
+                Mardi 14h-16h
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="0" onclick="if (this.checked) this.value=1; else this.value=0;" id="flexCheckChecked8" name="flexCheckDefault8">
+              <label class="form-check-label" for="flexCheckChecked8">
+                Mardi 16h-18h
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="0" onclick="if (this.checked) this.value=1; else this.value=0;" id="flexCheckDefault9" name="flexCheckDefault9">
+              <label class="form-check-label" for="flexCheckDefault9">
+                Mercredi 8h-10h
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="0" onclick="if (this.checked) this.value=1; else this.value=0;" id="flexCheckChecked10" name="flexCheckDefault10">
+              <label class="form-check-label" for="flexCheckChecked10">
+                Mercredi 10h-12h
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="0" onclick="if (this.checked) this.value=1; else this.value=0;" id="flexCheckDefault11" name="flexCheckDefault11">
+              <label class="form-check-label" for="flexCheckDefault11">
+                Mercredi 14h-16h
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="0" onclick="if (this.checked) this.value=1; else this.value=0;" id="flexCheckChecked12" name="flexCheckDefault12">
+              <label class="form-check-label" for="flexCheckChecked12">
+                Mercredi 16h-18h
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="0" onclick="if (this.checked) this.value=1; else this.value=0;" id="flexCheckDefault13" name="flexCheckDefault13">
+              <label class="form-check-label" for="flexCheckDefault13">
+                Jeudi 8h-10h
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="0" onclick="if (this.checked) this.value=1; else this.value=0;" id="flexCheckChecked14" name="flexCheckDefault14">
+              <label class="form-check-label" for="flexCheckChecked14">
+                Jeudi 10h-12h
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="0" onclick="if (this.checked) this.value=1; else this.value=0;" id="flexCheckDefault15" name="flexCheckDefault15">
+              <label class="form-check-label" for="flexCheckDefault15">
+                Jeudi 14h-16h
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="0" onclick="if (this.checked) this.value=1; else this.value=0;" id="flexCheckChecked16" name="flexCheckDefault16">
+              <label class="form-check-label" for="flexCheckChecked16">
+                Jeudi 16h-18h
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="0" onclick="if (this.checked) this.value=1; else this.value=0;" id="flexCheckDefault17" name="flexCheckDefault17">
+              <label class="form-check-label" for="flexCheckDefault17">
+                Vendredi 8h-10h
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="0" onclick="if (this.checked) this.value=1; else this.value=0;" id="flexCheckChecked18" name="flexCheckDefault18">
+              <label class="form-check-label" for="flexCheckChecked18">
+                Vendredi 10h-12h
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="0" onclick="if (this.checked) this.value=1; else this.value=0;" id="flexCheckDefault19" name="flexCheckDefault19">
+              <label class="form-check-label" for="flexCheckDefault19">
+                Vendredi 14h-16h
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="0" onclick="if (this.checked) this.value=1; else this.value=0;" id="flexCheckChecked20" name="flexCheckDefault20">
+              <label class="form-check-label" for="flexCheckChecked20">
+                Vendredi 16h-18h
+              </label>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+    {% endblock %}
+    
